@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>document</servlet-name>
-        <servlet-class>myapp.DocumentServlet</servlet-class>
+        <servlet-class>myapp.servlets.DocumentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>document</servlet-name>
@@ -24,7 +24,7 @@
 
     <servlet>
         <servlet-name>search</servlet-name>
-        <servlet-class>myapp.SearchServlet</servlet-class>
+        <servlet-class>myapp.servlets.SearchServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>search</servlet-name>

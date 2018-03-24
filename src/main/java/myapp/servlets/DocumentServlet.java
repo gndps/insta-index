@@ -31,14 +31,4 @@ public class DocumentServlet extends HttpServlet {
 
     }
 
-    @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws IOException {
-        String queryString = req.getParameter("query");
-        List<Document> docs = new DocumentService().searchData(queryString);
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(docs);
-        resp.setContentType("text/plain");
-        resp.getWriter().println(jsonString);
-    }
 }
