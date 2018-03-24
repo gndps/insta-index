@@ -1,5 +1,7 @@
 java-repo-tools
 service-account.json
+.idea/
+appengine-try-java.iml
 
 ## https://github.com/github/gitignore/blob/master/Java.gitignore
 *.class
