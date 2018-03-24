@@ -2,6 +2,7 @@ package myapp.servlets;
 
 import com.google.appengine.repackaged.com.google.gson.Gson;
 import myapp.models.Document;
+import myapp.models.SearchResult;
 import myapp.services.DocumentService;
 
 import javax.servlet.http.HttpServlet;
@@ -20,8 +21,9 @@ public class SearchServlet extends HttpServlet {
             throws IOException {
         String queryString = req.getParameter("query");
         List<Document> docs = new DocumentService().searchData(queryString);
+        SearchResult result = new SearchResult(docs);
         Gson gson = new Gson();
-        String jsonString = gson.toJson(docs);
+        String jsonString = gson.toJson(result);
         resp.setContentType("text/plain");
         resp.getWriter().println(jsonString);
     }
