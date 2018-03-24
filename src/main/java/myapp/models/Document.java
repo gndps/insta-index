@@ -8,6 +8,9 @@ public class Document {
     int id;
     String text;
 
+    public Document() {
+    }
+
     public Document(int id, String text) {
         this.id = id;
         this.text = text;
