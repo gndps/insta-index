@@ -24,7 +24,7 @@ public class SearchServlet extends HttpServlet {
         SearchResult result = new SearchResult(docs);
         Gson gson = new Gson();
         String jsonString = gson.toJson(result);
-        resp.setContentType("text/plain");
+        resp.setContentType("application/json");
         resp.getWriter().println(jsonString);
     }
 

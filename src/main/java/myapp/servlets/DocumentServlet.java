@@ -26,7 +26,7 @@ public class DocumentServlet extends HttpServlet {
         Gson gson = new Gson();
         Document doc = gson.fromJson(reader, Document.class);
         boolean saved = new DocumentService().saveData(doc);
-        response.setContentType("text/plain");
+        response.setContentType("application/json");
         response.getWriter().println("{ \"saved\": \"" + (saved?"true":"false") + "\" }");
 
     }
